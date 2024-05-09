@@ -4,7 +4,7 @@ import numpy as np
 from helper_datasets import convert_to_bags_2
 from set_seed import set_seed
 
-set_seed(79)
+set_seed(88)
 class ShapeletGeneration3LN(nn.Module):
 
   def __init__(self, n_prototypes
