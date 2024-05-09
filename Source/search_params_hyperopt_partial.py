@@ -2,7 +2,7 @@ import sys
 import os
 
 import dataset_names
-import helper_experiments
+import MainModule
 
 
 
@@ -14,7 +14,7 @@ if __name__ == "__main__":
 	print(liste)
 	search_type = "HyperoptSearchPartial"
 	for dataset_name in liste:
-		helper_experiments.find_result_for_one(
+		MainModule.find_result_for_one(
 			search_type, dataset_name, n_iter=100, search_max_epoch=1000)
 
 
