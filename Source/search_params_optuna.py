@@ -4,7 +4,7 @@ import os
 from optuna import samplers
 
 import dataset_names
-import helper_experiments
+import MainModule
 
 liste_samplers = ["Default", "NSGAIISampler", "CmaEsSampler", "MOTPESampler"]
 
@@ -16,6 +16,6 @@ if __name__ == "__main__":
 	for dataset_name in liste:
 		for sampler in liste_samplers:
 			search_type = f"OptunaSearch{sampler}"
-			helper_experiments.find_result_for_one(search_type,dataset_name,100)
+			MainModule.find_result_for_one(search_type,dataset_name,100)
 	
 
