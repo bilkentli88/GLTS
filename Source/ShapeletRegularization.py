@@ -1,7 +1,7 @@
 import torch
 from skorch import NeuralNetClassifier
 class ShapeletRegularizedNet(NeuralNetClassifier):
-  def __init__(self, *args, lambda_prototypes=0.05,lambda_linear_params=0.05, lambda_fused_lasso = 0.01,**kwargs):
+  def __init__(self, *args, lambda_prototypes=0.00,lambda_linear_params=0.05, lambda_fused_lasso = 0.0001,**kwargs):
     super().__init__(*args, **kwargs)
     self.lambda_prototypes = lambda_prototypes
     self.lambda_linear_params = lambda_linear_params
