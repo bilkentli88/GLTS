@@ -1,12 +1,12 @@
 import sys
-import helper_experiments
+import MainModule
 import dataset_names
 
 if __name__ == "__main__":
 	#print(sys.argv)
 	liste = dataset_names.get_database_list_from_arguments(sys.argv)
 	for dataset_name in liste:
-		helper_experiments.get_best_result_for_one_dataset(
+		MainModule.get_best_result_for_one_dataset(
 			search_type="RandomizedSearch"
 			,dataset_name= dataset_name
 			,n_iter=100
