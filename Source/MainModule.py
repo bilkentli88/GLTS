@@ -10,22 +10,22 @@ from skopt import BayesSearchCV
 from sklearn.model_selection import RandomizedSearchCV
 from hyperopt import hp,fmin,tpe,STATUS_OK,Trials,anneal,partial,mix,rand
 from ShapeletGeneration import ShapeletGeneration3LN as ShapeletNN
-from helper_skorch import ShapeletRegularizedNet
+from ShapeletRegularization import ShapeletRegularizedNet
 from helper_datasets import load_dataset
 from sklearn.preprocessing import StandardScaler
 from set_seed import set_seed
 
 set_seed(79)
-LIST_LEARNING_RATES = 	[0.01]
+LIST_LEARNING_RATES = 	[0.0001]
 
 
 LIST_STRIDE_RATIOS = [0.001,0.1,0.2,0.3, 0.4,0.5,1]
 
-PROTOTYPE_COUNT = 115
+PROTOTYPE_COUNT = 50
 
-LIST_N_PROTOTYPES = np.linspace(5, 120, PROTOTYPE_COUNT, endpoint=True, dtype=int).tolist()
+LIST_N_PROTOTYPES = np.linspace(5, 54, PROTOTYPE_COUNT, endpoint=True, dtype=int).tolist()
 def get_list_bag_sizes(time_series_length):
-    list_bag_sizes = list(range(4, min(301, time_series_length + 1)))  # 301 is used to include 300 in the list
+    list_bag_sizes = list(range(4, min(101, time_series_length + 1)))  # 101 is used to include 300 in the list
     return list_bag_sizes
 
 
