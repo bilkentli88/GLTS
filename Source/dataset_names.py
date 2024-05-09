@@ -34,7 +34,7 @@ def get_database_list_from_arguments(sys_argv):
 	return liste
 
 
-list_one = ["CBF"]
+list_one = ["BirdChicken","ECG200"]
 
 
 list_2_class = [
